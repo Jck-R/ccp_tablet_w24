@@ -51,9 +51,6 @@ nav a:hover {
 }
 
 
-/* Modify below */
-
-
 h1, h2, h3 {
     color: #00274C;
 }
@@ -68,7 +65,9 @@ h2 {
 }
 
 h3 {
+    margin: 10px 0;
     font-size: 16px;
+    font-weight: bold;
 }
 
 main {
@@ -91,6 +90,12 @@ img, video {
     border-radius: 10px;
     margin: 5px 0;
 }
+
+ul {
+    padding: 0px 1em;
+    list-style-type: disc;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .gif {
       display: none;
@@ -100,7 +105,27 @@ img, video {
     }
   }
 
-ul {
-    padding: 0px 1em;
-    list-style-type: disc;
+@media (min-width: 600px) {
+    nav ul {
+        height: 70px; /* Adjust the height as needed */
+    }
+
+    nav li {
+        font-size: 18px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    }
+
+    h1 {
+        margin: 10px 0;
+    }
+
+    img {
+        height: 200px;
+        width: auto;
+    }
+
 }
